@@ -366,30 +366,6 @@
       });
     });
   }
-  // looping scene videos (wide screens only), layered over their still photo
-  const sceneVideos = [];
-  function initSceneVideos() {
-    if (reduce || matchMedia("(max-aspect-ratio: 4/5)").matches) return;
-    const map = { hero: "assets/video/hero.mp4", fog: "assets/video/fog.mp4", light: "assets/video/lamp.mp4" };
-    stage.layers.forEach((l) => {
-      const src = map[l.el.dataset.for];
-      if (!src) return;
-      const v = document.createElement("video");
-      Object.assign(v, { muted: true, loop: true, playsInline: true, preload: l.el.dataset.for === "hero" ? "auto" : "metadata", src });
-      v.setAttribute("aria-hidden", "true");
-      v.addEventListener("playing", () => v.classList.add("is-playing"));
-      v.addEventListener("error", () => v.remove(), { once: true });
-      l.el.appendChild(v);
-      sceneVideos.push({ v, layer: l.el });
-    });
-  }
-  function updateSceneVideos() {
-    sceneVideos.forEach(({ v, layer }) => {
-      const on = layer.style.visibility !== "hidden";
-      if (on && v.paused) v.play().catch(() => {});
-      else if (!on && !v.paused) v.pause();
-    });
-  }
 
   /* ---------------- master loop ---------------- */
   function loop() {
@@ -405,7 +381,6 @@
     updateCases(vh);
     updateSteps(vh);
     updateStage(vh);
-    updateSceneVideos();
     requestAnimationFrame(loop);
   }
 
@@ -538,7 +513,6 @@
   initLoader();
   initSmoothScroll();
   initFaq();
-  initSceneVideos();
   initCursor();
   initMagnetic();
   initHeroParallax();

@@ -549,11 +549,6 @@ main, footer { position: relative; z-index: 1; }
 .loader__mark i { font-style: normal; color: var(--lamp); -webkit-text-fill-color: var(--lamp); }
 @keyframes shimmer { from { background-position: 100% 0; } to { background-position: -50% 0; } }
 
-/* looping video scenes sit on top of their still photo, wide screens only */
-.layer video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 1.2s var(--ease); }
-.layer video.is-playing { opacity: 1; }
-.layer[data-for="hero"] video { inset: -3%; width: 106%; height: 106%; translate: calc(var(--px, 0) * -18px) calc(var(--py, 0) * -12px); transition: opacity 1.2s var(--ease), translate .8s var(--ease); }
-@media (max-aspect-ratio: 4/5) { .layer video { display: none; } }
 
 /* FAQ on a quiet glass panel so it reads over the stairwell */
 .faq { position: relative; padding-block: clamp(80px, 10vw, 160px); }
