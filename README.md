@@ -3,9 +3,9 @@
 Agency website for US finance, fintech and SaaS clients. Plain HTML/CSS/JS, so there is nothing to install.
 
 ## Live
-- **Current (cinematic):** https://harshitjain417.github.io/capital-media-website/
-- **Classic V1 (gold):** https://harshitjain417.github.io/capital-media-website/classic/
-- **Classic V2 (cobalt):** https://harshitjain417.github.io/capital-media-website/v2/
+- **Current (cinematic v2):** https://harshitjain417.github.io/voitz-media-cinematic-v2/
+- **Classic V1 (gold):** https://harshitjain417.github.io/voitz-media-cinematic-v2/classic/
+- **Classic V2 (cobalt):** https://harshitjain417.github.io/voitz-media-cinematic-v2/v2/
 
 The classic versions are also frozen in the git tag `classic-v1`.
 
