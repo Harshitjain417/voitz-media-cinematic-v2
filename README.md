@@ -2,10 +2,12 @@
 
 Agency website for US finance, fintech and SaaS clients. Plain HTML/CSS/JS, so there is nothing to install.
 
-## Status
-Private. Not published anywhere. Preview locally only.
+## Live
+- **Current (cinematic):** https://harshitjain417.github.io/capital-media-website/
+- **Classic V1 (gold):** https://harshitjain417.github.io/capital-media-website/classic/
+- **Classic V2 (cobalt):** https://harshitjain417.github.io/capital-media-website/v2/
 
-Versions in this repo: current site (root), `cinematic-v2/`, `cinematic-v1/`, `classic/`, `v2/`. Each is also frozen as a git tag.
+The classic versions are also frozen in the git tag `classic-v1`.
 
 ## Folders
 - `index.html`, `styles/`, `scripts/`: the current cinematic site
